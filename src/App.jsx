@@ -1,4 +1,4 @@
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import React from "react";
 
 import Places from "./components/Places.jsx";
@@ -6,15 +6,38 @@ import Modal from "./components/Modal.jsx";
 import DeleteConfirmation from "./components/DeleteConfirmation.jsx";
 import logoImg from "./assets/logo.png";
 import AvailablePlaces from "./components/AvailablePlaces.jsx";
-import { updateUserPlaces } from "./http.js";
+import { updateUserPlaces, fetchUserPlaces } from "./http.js";
 import Error from "./components/Error.jsx";
 
 function App() {
   const selectedPlace = useRef();
 
+  const [isFetching, setIsFetching] = useState(false);
   const [userPlaces, setUserPlaces] = useState([]);
+  const [error, setError] = useState();
   const [errorUpdatingPlaces, setErrorUpdatingPlaces] = useState();
   const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  useEffect(() => {
+    async function fetchPlaces() {
+      setIsFetching(true);
+
+      try {
+        const places = await fetchUserPlaces();
+
+          setUserPlaces(places);
+          setIsFetching(false);
+      } catch (error) {
+        setError({
+          message:
+            error.message || "Could not fetch places, please try again later",
+        });
+        setIsFetching(false);
+      }
+    }
+
+    fetchPlaces();
+  }, []);
 
   function handleStartRemovePlace(place) {
     setModalIsOpen(true);
@@ -67,6 +90,10 @@ function App() {
     setErrorUpdatingPlaces(null);
   }
 
+  if (error) {
+    return <Error title="An Error occured!" message={error.message} />;
+  }
+
   return (
     <>
       <Modal open={errorUpdatingPlaces} onClose={handleError}>
@@ -99,6 +126,8 @@ function App() {
           title="I'd like to visit ..."
           fallbackText="Select the places you would like to visit below."
           places={userPlaces}
+          isLoading={isFetching}
+          loadingText="Fetching data..."
           onSelectPlace={handleStartRemovePlace}
         />
 
