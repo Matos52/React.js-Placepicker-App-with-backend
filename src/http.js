@@ -6,7 +6,7 @@ export async function fetchAvailablePlaces() {
       throw new Error('Failed to fetch places');
     }
 
-    return resData.places;
+    return resData;
 }
 
 export async function fetchUserPlaces() {
@@ -17,7 +17,7 @@ export async function fetchUserPlaces() {
     throw new Error('Failed to fetch user places');
   }
 
-  return resData.places;
+  return resData;
 }
 
 export async function updateUserPlaces(places) {

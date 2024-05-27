@@ -1,0 +1,20 @@
+INSERT INTO place (id, title, image, image_alt, lat, lon)
+VALUES 
+    ('1', 'Forest Waterfall', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/forest-waterfall.jpg'), 'A tranquil forest with a cascading waterfall amidst greenery.', 44.5588, -80.344),
+    ('2', 'Sahara Desert Dunes', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/desert-dunes.jpg'), 'Golden dunes stretching to the horizon in the Sahara Desert.', 25.0, 0.0),
+    ('3', 'Himalayan Peaks', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/majestic-mountains.jpg'), 'The sun setting behind snow-capped peaks of majestic mountains.', 27.9881, 86.925),
+    ('4', 'Caribbean Beach', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/caribbean-beach.jpg'), 'Pristine white sand and turquoise waters of a Caribbean beach.', 18.2208, -66.5901),
+    ('5', 'Ancient Grecian Ruins', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ruins.jpg'), 'Historic ruins standing tall against the backdrop of the Grecian sky.', 37.9715, 23.7257),
+    ('6', 'Amazon Rainforest Canopy', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/rainforest.jpg'), 'Lush canopy of a rainforest, teeming with life.', -3.4653, -62.2159),
+    ('7', 'Northern Lights', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/northern-lights.jpg'), 'Dazzling display of the Northern Lights in a starry sky.', 64.9631, -19.0208),
+    ('8', 'Japanese Temple', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/japanese-temple.jpg'), 'Ancient Japanese temple surrounded by autumn foliage.', 34.9949, 135.785),
+    ('9', 'Great Barrier Reef', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/great-barrier-reef.jpg'), 'Vibrant coral formations of the Great Barrier Reef underwater.', -18.2871, 147.6992),
+    ('10', 'Parisian Streets', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/parisian-streets.jpg'), 'Charming streets of Paris with historic buildings and cafes.', 48.8566, 2.3522),
+    ('11', 'Grand Canyon', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/grand-canyon.jpg'), 'Expansive view of the deep gorges and ridges of the Grand Canyon.', 36.1069, -112.1129),
+    ('12', 'Venetian Canals', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/venetian-canals.jpg'), 'Glistening waters of the Venetian canals as gondolas glide by at sunset.', 45.4408, 12.3155),
+    ('13', 'Taj Mahal', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/taj-mahal.jpg'), 'The iconic Taj Mahal reflecting in its surrounding waters during sunrise.', 27.1751, 78.0421),
+    ('14', 'Kerala Backwaters', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/kerala-backwaters.jpg'), 'Tranquil waters and lush greenery of the Kerala backwaters.', 9.4981, 76.3388),
+    ('15', 'African Savanna', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/african-savanna.jpg'), 'Wild animals roaming freely in the vast landscapes of the African savanna.', -2.153, 34.6857),
+    ('16', 'Victoria Falls', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/victoria-falls.jpg'), 'The powerful cascade of Victoria Falls, a natural wonder between Zambia and Zimbabwe.', -17.9243, 25.8572),
+    ('17', 'Machu Picchu', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/machu-picchu.jpg'), 'The historic Incan citadel of Machu Picchu illuminated by the morning sun.', -13.1631, -72.545),
+    ('18', 'Amazon River', LOAD_FILE('C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/amazon-river.jpg'), 'Navigating the waters of the Amazon River, surrounded by dense rainforest.', -3.4653, -58.38);
